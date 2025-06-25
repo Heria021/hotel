@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu, Phone, Mail } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigationItems = [
   {
@@ -119,19 +120,22 @@ export function MainNav() {
             <Phone className="h-4 w-4" />
             <span>+1 (555) 123-4567</span>
           </div>
+          <ThemeToggle />
           <Button asChild>
             <Link href="/book">Book Now</Link>
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </SheetTrigger>
+        {/* Theme Toggle & Mobile Navigation */}
+        <div className="flex items-center space-x-2 lg:hidden">
+          <ThemeToggle />
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px] p-6">
             <div className="flex flex-col space-y-4 mt-4">
               <Link
@@ -187,13 +191,18 @@ export function MainNav() {
                   <Mail className="h-4 w-4" />
                   <span>info@narayanihotel.com</span>
                 </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">Theme</span>
+                  <ThemeToggle />
+                </div>
                 <Button asChild className="w-full">
                   <Link href="/book" onClick={() => setIsOpen(false)}>Book Now</Link>
                 </Button>
               </div>
             </div>
           </SheetContent>
-        </Sheet>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

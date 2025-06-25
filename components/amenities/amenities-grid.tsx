@@ -177,8 +177,8 @@ export function AmenitiesGrid() {
           ))}
         </div>
 
-        {/* Additional Services */}
-        <div className="mt-16 bg-muted/30 rounded-2xl p-8 lg:p-12">
+        {/* Additional Services - Hidden on mobile */}
+        <div className="mt-16 bg-muted/30 rounded-2xl p-8 lg:p-12 hidden md:block">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
               Additional Services

@@ -120,7 +120,7 @@ export function SpecialOffers() {
                   {/* Most Popular Badge */}
                   {offer.popular && (
                     <Badge className="bg-primary text-primary-foreground font-bold">
-                      <Sparkles className="h-3 w-3 mr-1 text-primary-foreground" />
+                      <Sparkles className="h-3 w-3 mr-1 fill-current" />
                       Most Popular
                     </Badge>
                   )}
@@ -134,7 +134,7 @@ export function SpecialOffers() {
                 {/* Icon */}
                 <div className="absolute top-4 left-4">
                   <div className="bg-white/90 p-2 rounded-full">
-                    <offer.icon className="h-5 w-5 text-primary-foreground" />
+                    <offer.icon className="h-5 w-5 text-primary" />
                   </div>
                 </div>
               </div>

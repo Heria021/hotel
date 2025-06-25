@@ -101,8 +101,8 @@ export function HeroSection() {
         <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white hover:text-black" />
       </Carousel>
 
-      {/* Hotel Highlights */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent">
+      {/* Hotel Highlights - Hidden on mobile */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent hidden md:block">
         <div className="container py-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
             {highlights.map((highlight, index) => (

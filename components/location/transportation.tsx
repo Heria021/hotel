@@ -1,12 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Plane, 
-  Train, 
-  Car, 
+import {
+  Plane,
+  Train,
+  Car,
   Bus,
-  Taxi,
   MapPin,
   Clock,
   DollarSign,
@@ -246,7 +245,7 @@ export function Transportation() {
             </Card>
             <Card className="text-center">
               <CardContent className="p-4">
-                <Taxi className="h-6 w-6 mx-auto mb-2 text-primary" />
+                <Car className="h-6 w-6 mx-auto mb-2 text-primary" />
                 <div className="font-medium text-sm">Taxi Stand</div>
                 <div className="text-xs text-muted-foreground">1 min</div>
               </CardContent>

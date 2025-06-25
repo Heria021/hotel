@@ -83,8 +83,8 @@ export function HotelHighlights() {
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                 <div className="absolute top-4 left-4">
-                  <div className="bg-white/90 p-2 rounded-full">
-                    <highlight.icon className="h-5 w-5 text-primary" />
+                  <div className="bg-white p-2 rounded-full shadow-lg border border-white/20">
+                    <highlight.icon className="h-5 w-5 text-primary-foreground" />
                   </div>
                 </div>
               </div>

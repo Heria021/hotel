@@ -3,14 +3,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Calendar, 
-  Clock, 
-  Gift, 
-  Heart, 
-  Sparkles, 
+import {
+  Calendar,
+  Clock,
+  Gift,
+  Heart,
+  Sparkles,
   Users,
-  Percent,
   Tag
 } from "lucide-react";
 
@@ -91,7 +90,7 @@ export function SpecialOffers() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
-            <Tag className="h-3 w-3 mr-1 " />
+            <Tag className="h-3 w-3 mr-1  " />
             Special Offers
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
@@ -107,12 +106,6 @@ export function SpecialOffers() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {offers.map((offer, index) => (
             <Card key={offer.id} className={`group overflow-hidden hover:shadow-lg transition-all duration-300 ${offer.popular ? 'ring-2 ring-primary/20' : ''}`}>
-              {offer.popular && (
-                <div className="bg-primary text-primary-foreground text-xs font-medium px-3 py-1 text-center">
-                  Most Popular
-                </div>
-              )}
-              
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={offer.image}
@@ -121,19 +114,27 @@ export function SpecialOffers() {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-                
-                {/* Discount Badge */}
-                <div className="absolute top-4 right-4">
+
+                {/* Badges Container */}
+                <div className="absolute top-4 right-4 flex gap-2">
+                  {/* Most Popular Badge */}
+                  {offer.popular && (
+                    <Badge className="bg-primary text-primary-foreground font-bold">
+                      <Sparkles className="h-3 w-3 mr-1 text-primary-foreground" />
+                      Most Popular
+                    </Badge>
+                  )}
+
+                  {/* Discount Badge */}
                   <Badge className="bg-primary text-primary-foreground font-bold">
-                    <Percent className="h-3 w-3 mr-1" />
                     {offer.discount}
                   </Badge>
                 </div>
-                
+
                 {/* Icon */}
                 <div className="absolute top-4 left-4">
                   <div className="bg-white/90 p-2 rounded-full">
-                    <offer.icon className="h-5 w-5 text-primary" />
+                    <offer.icon className="h-5 w-5 text-primary-foreground" />
                   </div>
                 </div>
               </div>

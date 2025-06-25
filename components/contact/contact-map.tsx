@@ -1,11 +1,13 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  MapPin, 
-  Navigation, 
-  Car, 
-  Train, 
+import {
+  MapPin,
+  Navigation,
+  Car,
+  Train,
   Plane,
   ExternalLink,
   Copy

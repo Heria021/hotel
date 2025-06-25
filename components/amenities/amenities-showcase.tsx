@@ -108,7 +108,7 @@ export function AmenitiesShowcase() {
                   </div>
                   
                   <Button asChild className="w-full">
-                    <Link href={item.link} legacyBehavior>Explore {item.title}</Link>
+                    <Link href={item.link}>Explore {item.title}</Link>
                   </Button>
                 </CardContent>
               </Card>

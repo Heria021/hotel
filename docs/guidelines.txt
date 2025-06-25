@@ -1,0 +1,156 @@
+When building a hotel website with shadcn/ui components, here are the key focus areas and considerations:
+
+## Design & User Experience Focus
+
+**Component Selection & Customization**
+- Use **Card** components for room listings and amenity showcases
+- Implement **Dialog** for booking forms and image galleries
+- Utilize **Sheet** for mobile navigation and filters
+- **Accordion** for FAQ sections and room details
+- **Carousel** for room photo galleries and testimonials
+- **Badge** components for room features and amenities
+
+**Visual Hierarchy & Branding**
+- Customize shadcn's CSS variables to match your hotel's brand colors
+- Ensure proper contrast ratios for accessibility
+- Use consistent spacing with shadcn's spacing system
+- Implement dark/light mode thoughtfully (hospitality typically favors light themes)
+
+## Technical Considerations
+
+**Performance Optimization**
+- shadcn components are lightweight, but still optimize bundle size
+- Use lazy loading for image-heavy components like Carousels
+- Implement proper loading states with shadcn's Skeleton component
+- Consider code splitting for booking-related components
+
+**Responsive Design**
+- shadcn is mobile-first, but test extensively on hotel booking workflows
+- Ensure booking forms work seamlessly on mobile devices
+- Use shadcn's responsive utilities for different screen sizes
+- Pay special attention to date picker components on mobile
+
+**Form Handling**
+- Use shadcn's Form components with proper validation
+- Implement react-hook-form for complex booking forms
+- Add proper error handling and user feedback
+- Use Input, Select, and DatePicker components consistently
+
+## Hotel-Specific Implementation
+
+**Booking System Integration**
+- Create custom booking components using shadcn's base components
+- Use **Calendar** component for date selection
+- Implement **Command** component for search functionality
+- Use **Popover** for room selection and guest count
+
+**Key Components to Focus On:**
+```typescript
+// Essential shadcn components for hotels
+- Button (CTA buttons, booking actions)
+- Card (room cards, amenity cards)
+- Dialog (booking modals, image viewers)
+- Form (contact forms, booking forms)
+- Input (search, guest details)
+- Select (room types, preferences)
+- Calendar (check-in/out dates)
+- Carousel (room galleries)
+- Tabs (room details, amenities)
+- Badge (room features, ratings)
+- Alert (booking confirmations, errors)
+```
+
+## Accessibility & Standards
+
+**shadcn Accessibility Benefits**
+- Built-in ARIA attributes and keyboard navigation
+- Proper focus management in modals and dropdowns
+- Screen reader friendly components
+- High contrast mode support
+
+**Hotel-Specific Accessibility**
+- Ensure booking forms are fully accessible
+- Add proper alt text for room images
+- Implement skip navigation for booking flow
+- Test with screen readers for booking process
+
+## Performance & SEO
+
+**shadcn SEO Considerations**
+- Components render properly on server-side
+- Semantic HTML structure maintained
+- Proper heading hierarchy with Typography components
+- Fast loading with optimized component imports
+
+**Critical Performance Areas**
+- Image optimization in Carousel components
+- Lazy loading for non-critical UI elements
+- Optimize booking form performance
+- Fast initial page load for search engines
+
+## Development Best Practices
+
+**Component Architecture**
+- Create hotel-specific composite components using shadcn primitives
+- Build a design system extending shadcn for consistency
+- Use TypeScript for better component prop validation
+- Implement proper error boundaries
+
+**State Management**
+- Use shadcn's built-in state management for UI components
+- Implement proper booking state management
+- Handle loading states consistently across components
+- Manage form state effectively
+
+## Common Pitfalls to Avoid
+
+**Design Pitfalls**
+- Don't over-customize shadcn components (loses consistency)
+- Avoid mixing UI libraries (stick to shadcn ecosystem)
+- Don't ignore mobile-first approach for booking flows
+- Avoid complex animations that impact booking conversion
+
+**Technical Pitfalls**
+- Don't import entire shadcn library (use selective imports)
+- Avoid deep component nesting (impacts performance)
+- Don't skip testing on actual mobile devices
+- Avoid inconsistent form validation patterns
+
+## Hotel Industry Specific Considerations
+
+**Booking Flow Optimization**
+- Use shadcn's Dialog sparingly in booking process (can interrupt flow)
+- Implement progress indicators with Steps component
+- Use Toast notifications for booking confirmations
+- Keep booking forms simple and clear
+
+**Trust & Security Indicators**
+- Use Badge components for security certifications
+- Implement proper loading states during payment processing
+- Show clear confirmation messages
+- Display trust signals prominently
+
+**Mobile Booking Experience**
+- shadcn's mobile components work well, but test booking flow extensively
+- Ensure date pickers work smoothly on mobile
+- Optimize form inputs for mobile keyboards
+- Test payment forms on various mobile devices
+
+## Recommended shadcn Component Combinations
+
+**Room Listing Page:**
+```
+Card + Badge + Button + Carousel + Dialog
+```
+
+**Booking Form:**
+```
+Form + Input + Select + Calendar + Button + Alert
+```
+
+**Navigation:**
+```
+NavigationMenu + Sheet (mobile) + Command (search)
+```
+
+The key is to leverage shadcn's consistency and accessibility while customizing thoughtfully for the hospitality industry's specific needs. Focus on conversion optimization and mobile experience, as most hotel bookings now happen on mobile devices.
